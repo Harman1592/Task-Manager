@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTaskContext } from '../context/TaskContext.jsx';
 
-function TaskCard({ task }) {
+function TaskCard({ task, taskNumber }) {
   const navigate = useNavigate();
 
   const {
@@ -38,7 +38,7 @@ function TaskCard({ task }) {
     <>
       <div className="task-card">
         <span className="task-id">
-          #{task.id}
+          #{taskNumber}
         </span>
 
         <div className="task-title-cell">

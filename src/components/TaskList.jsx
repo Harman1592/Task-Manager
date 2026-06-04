@@ -19,10 +19,11 @@ function TaskList({ tasks }) {
         <span>Actions</span>
       </div>
 
-      {tasks.map((task) => (
+      {tasks.map((task, index) => (
         <TaskCard
           key={task.id}
           task={task}
+          taskNumber={index + 1}
         />
       ))}
     </div>
